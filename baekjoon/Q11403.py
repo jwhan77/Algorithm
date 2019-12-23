@@ -1,20 +1,16 @@
-#11403
 import queue
-import numpy as np
 
 def run():
-    n = int(input(""))
-    V = np.zeros((n,n), dtype=np.int8)
-    exist_path = np.zeros((n,n), dtype=np.int8)
+    n = int(input())
+    V = [[0 for j in range(0, n)] for i in range(0, n)]
+    exist_path = [[0 for j in range(0, n)] for i in range(0, n)]
     
     for i in range(0, n):
-        line = input("")
-        line_split = line.split()
-        for j in range(0, n):
-            V[i][j] = int(line_split[j])
+        for j, e in enumerate(map(int, input().split())):
+            V[i][j] = e
     
     for i in range(0, n):
-        visited = np.zeros(n, dtype=np.int8)
+        visited = [0 for i in range(0, n)]
         q = queue.Queue()
         q.put(i)
 
