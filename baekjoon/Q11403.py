@@ -8,14 +8,15 @@ def run():
     exist_path = np.zeros((n,n), dtype=np.int8)
     
     for i in range(0, n):
+        line = input("")
+        line_split = line.split()
         for j in range(0, n):
-            V[i][j] = input("")
+            V[i][j] = int(line_split[j])
     
     for i in range(0, n):
         visited = np.zeros(n, dtype=np.int8)
         q = queue.Queue()
         q.put(i)
-        visited[i] = 1
 
         while q.qsize() != 0:
             current_node = q.get()
@@ -24,5 +25,8 @@ def run():
                     q.put(j)
                     visited[j] = 1
                     exist_path[i][j] = 1
+                    
+    for i in range(0, n):
+        print(' '.join(str(m) for m in exist_path[1]))
                 
 run()
