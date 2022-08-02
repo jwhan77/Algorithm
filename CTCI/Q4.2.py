@@ -66,4 +66,4 @@ test_arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 t.minimal_height_tree(test_arr)
 
 
-# array를 slice해서 넘기면 space complexcity 올라감
+# https://velog.io/@jwhan/정렬된-배열에서-최소-높이-이진탐색트리-만들기
